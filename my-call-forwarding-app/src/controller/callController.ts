@@ -21,7 +21,7 @@ export const incomingCall = async (req: Request, res: Response) => {
   if (userInput === '1') {
     // Forward the call
     client.calls.create({
-        url: `https://your-render-url/twiml?to=${encodeURIComponent(forwardTo)}`, // URL to your TwiML endpoint
+        url: `https://my-call-forwarding-app.onrender.com/twiml?to=${encodeURIComponent(forwardTo)}`, // URL to your TwiML endpoint
       to: forwardTo, // Number to forward to
       from: twilioNumber, // Twilio number
     })
